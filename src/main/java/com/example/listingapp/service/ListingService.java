@@ -1,6 +1,5 @@
 package com.example.listingapp.service;
 
-import com.example.listingapp.entity.Category;
 import com.example.listingapp.entity.Listing;
 
 import java.util.List;

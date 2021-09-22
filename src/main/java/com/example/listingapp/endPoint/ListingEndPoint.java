@@ -21,13 +21,13 @@ public class ListingEndPoint {
     }
 
     @GetMapping("/byUser/{email}")
-    public List<Listing> getByEmail(@RequestBody Listing listing) {
-        return listingService.getByUserEmail(listing.getUser().getEmail());
+    public List<Listing> getByEmail(@PathVariable("email") String email) {
+        return listingService.getByUserEmail(email);
     }
 
     @GetMapping("/byCategory/{categoryId}")
-    public List<Listing> getByCategoryId(@RequestBody Listing listing) {
-        return listingService.getByCategory(listing.getCategory().getId());
+    public List<Listing> getByCategoryId(@PathVariable("categoryId") int id) {
+        return listingService.getByCategory(id);
     }
 
 
